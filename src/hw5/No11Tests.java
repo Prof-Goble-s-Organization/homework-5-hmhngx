@@ -46,7 +46,7 @@ public class No11Tests {
 			return "";
 		}
 	}
-	
+
 	@Test
 	public void testRemoveFromEmptyTree() {
 		COMP232LinkedBinarySearchTree<Integer, String> bst = new COMP232LinkedBinarySearchTree<Integer, String>();
@@ -160,7 +160,7 @@ public class No11Tests {
 		bst.size--;
 		bst.root.right.left = null; // remove E from tree.
 		bst.size--;
-		
+
 		String val = bst.remove(15);
 
 		assertEquals("Incorrect value returned", "B", val);
@@ -168,7 +168,7 @@ public class No11Tests {
 
 		checkTreeStructure(bst.root);
 		checkTreeValuesInOrder(bst.root, "CDFG");
-		
+
 		val = bst.remove(45);
 
 		assertEquals("Incorrect value returned", "F", val);
@@ -185,7 +185,7 @@ public class No11Tests {
 
 		COMP232LinkedBinarySearchTree<Integer, String> bst = new COMP232LinkedBinarySearchTree<Integer, String>(
 				keys, vals);
-		
+
 		String val = bst.remove(15);
 
 		assertEquals("Incorrect value returned", "B", val);
@@ -193,7 +193,7 @@ public class No11Tests {
 
 		checkTreeStructure(bst.root);
 		checkTreeValuesInOrder(bst.root, "ACDEFG");
-		
+
 		val = bst.remove(45);
 
 		assertEquals("Incorrect value returned", "F", val);
@@ -202,7 +202,7 @@ public class No11Tests {
 		checkTreeStructure(bst.root);
 		checkTreeValuesInOrder(bst.root, "ACDEG");
 	}
-	
+
 	@Test
 	public void testRemoveRootWithTwoChildren() {
 		Integer[] keys = { 30, 15, 45, 10, 20, 40, 50 };
@@ -210,7 +210,7 @@ public class No11Tests {
 
 		COMP232LinkedBinarySearchTree<Integer, String> bst = new COMP232LinkedBinarySearchTree<Integer, String>(
 				keys, vals);
-		
+
 		String val = bst.remove(30);
 
 		assertEquals("Incorrect value returned", "D", val);
