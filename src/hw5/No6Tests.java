@@ -8,32 +8,32 @@ import org.junit.Test;
 public class No6Tests {
 
 	private COMP232ArrayHeap<Integer, String> heap;
-	
+
 	@Before
 	public void setUp() {
 		heap = new COMP232ArrayHeap<Integer, String>();
 	}
-	
+
 	@Test
 	public void testAddToEmptyHeap() {
 		heap.add(1, "A");
 		assertEquals("Incorrect size", 1, heap.size());
-		
+
 		assertEquals("Top of heap is not correct", "A", heap.peek());
 	}
-	
+
 	@Test
 	public void testAddLargestToOneElementHeap() {
 		heap.add(1, "A");
 		heap.add(2, "B");
 		assertEquals("Incorrect size", 2, heap.size());
 		assertEquals("Top of heap is not correct", "B", heap.remove());
-		
+
 		assertTrue("Heap property was not preserved by add", heap.checkHeapProperty());
-		
+
 		assertEquals("Top of heap not correct after remove", "A", heap.peek());
 	}
-	
+
 	@Test
 	public void testAddNonLargestToOneElementHeap() {
 		heap.add(2, "B");
@@ -41,10 +41,10 @@ public class No6Tests {
 		assertEquals("Incorrect size", 2, heap.size());
 		assertEquals("Top of heap is not correct", "B", heap.remove());
 		assertTrue("Heap property was not preserved by add", heap.checkHeapProperty());
-		
+
 		assertEquals("Top of heap not correct after remove", "A", heap.peek());
 	}
-	
+
 	@Test
 	public void testAddLargestToGrowingHeap() {
 		for (int i=0; i<100; i++) {
@@ -54,7 +54,7 @@ public class No6Tests {
 			assertTrue("Heap property was not preserved by add", heap.checkHeapProperty());
 		}
 	}
-	
+
 	@Test
 	public void testAddNotLargestToGrowingHeap() {
 		for (int i=100; i>=0; i--) {
@@ -64,7 +64,7 @@ public class No6Tests {
 			assertTrue("Heap property was not preserved by add", heap.checkHeapProperty());
 		}
 	}
-	
+
 	@Test
 	public void testRandomHeapBuiltCorrectly() {
 		Random rnd = new Random();

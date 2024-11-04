@@ -15,40 +15,40 @@ package hw5;
  * @author Dickinson College
  */
 public interface COMP232PriorityQueue<K extends Comparable<K>, V>{
-    /**
-     * Add the provided key, value pair to the priority queue
-     * 
-     * @param key
-     *      The key
-     * @param value
-     *      The value
-     */
-    public void add(K key, V value);
+	/**
+	 * Add the provided key, value pair to the priority queue
+	 * 
+	 * @param key
+	 *      The key
+	 * @param value
+	 *      The value
+	 */
+	public void add(K key, V value);
 
-    /**
-     * Remove the <key, value> pair with the highest priority
-     * 
-     * @return
-     *      The value associated with the highest priority key or null if the 
-     *      priority queue is empty
-     */
-    public V remove();
+	/**
+	 * Remove the <key, value> pair with the highest priority
+	 * 
+	 * @return
+	 *      The value associated with the highest priority key or null if the 
+	 *      priority queue is empty
+	 */
+	public V remove();
 
-    /**
-     * Return a reference to the value at the head of the priority queue without 
-     * remove it from the Queue.
-     * 
-     * @return
-     *      A reference to the element at the head of the priority queue or null 
-     *      if the priority queue is empty.
-     */
-    public V peek();
+	/**
+	 * Return a reference to the value at the head of the priority queue without 
+	 * remove it from the Queue.
+	 * 
+	 * @return
+	 *      A reference to the element at the head of the priority queue or null 
+	 *      if the priority queue is empty.
+	 */
+	public V peek();
 
-    /**
-     * Return the number of elements in the priority queue.
-     * 
-     * @return
-     *      The size of the priority queue
-     */
-    public int size();
+	/**
+	 * Return the number of elements in the priority queue.
+	 * 
+	 * @return
+	 *      The size of the priority queue
+	 */
+	public int size();
 }

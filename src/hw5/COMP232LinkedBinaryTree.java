@@ -8,7 +8,7 @@ import java.util.*;
  * @author Dickinson College
  */
 public class COMP232LinkedBinaryTree<K, V> implements COMP232BinaryTree<K, V>{
-    protected BTNode<K, V> root;
+	protected BTNode<K, V> root;
 	protected int size;
 
 	/**
@@ -19,7 +19,7 @@ public class COMP232LinkedBinaryTree<K, V> implements COMP232BinaryTree<K, V>{
 		size = 0;
 	}
 
-    /**
+	/**
 	 * Construct a new LinkedBinaryTree with the specified key, value pair
 	 * stored at the root.
 	 * 
@@ -293,7 +293,7 @@ public class COMP232LinkedBinaryTree<K, V> implements COMP232BinaryTree<K, V>{
 		}
 	}
 
-    /**
+	/**
 	 * {@inheritDoc}
 	 */
 	public void visitPreOrder(COMP232Visitor<K, V> visitor) {
@@ -363,7 +363,7 @@ public class COMP232LinkedBinaryTree<K, V> implements COMP232BinaryTree<K, V>{
 		}
 	}
 
-    /**
+	/**
 	 * Count the number of leaf nodes in this tree.
 	 * 
 	 * @return
@@ -373,31 +373,31 @@ public class COMP232LinkedBinaryTree<K, V> implements COMP232BinaryTree<K, V>{
 		throw new UnsupportedOperationException("Not yet implemented");
 	}
 
-    /*
+	/*
 	 * Class that represents a node in a binary tree. Each node holds a key,
 	 * value pair as well as references to its left and right children and its
 	 * parent.
 	 */
-    static protected class BTNode<K, V> {
-        public K key;
-        public V value;
-        public BTNode<K, V> left;
-        public BTNode<K, V> right;
-        public BTNode<K, V> parent;
+	static protected class BTNode<K, V> {
+		public K key;
+		public V value;
+		public BTNode<K, V> left;
+		public BTNode<K, V> right;
+		public BTNode<K, V> parent;
 
-        public BTNode(K key, V value) {
-            this.key = key;
-            this.value = value;
-            left = null;
-            right = null;
-            parent = null;
-        }
+		public BTNode(K key, V value) {
+			this.key = key;
+			this.value = value;
+			left = null;
+			right = null;
+			parent = null;
+		}
 
-        public boolean isLeaf() {
-            return left == null && right == null;
-        }
+		public boolean isLeaf() {
+			return left == null && right == null;
+		}
 
-        /*
+		/*
 		 * NOTE: The parent pointer isn't strictly necessary for some of the
 		 * basic binary tree uses and operations. However, as this class serves
 		 * as the basis for later work on Heaps and AVL Trees where parent
@@ -405,5 +405,5 @@ public class COMP232LinkedBinaryTree<K, V> implements COMP232BinaryTree<K, V>{
 		 * allows the Heap and AVL Trees to inherit much of the functionality
 		 * (e.g. traversals) from earlier implementations.
 		 */
-    }
+	}
 }
